@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO GAMES</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            color: gray;
+            font-size: 20px;
+            padding: 0 5px;
+            cursor: pointer;
+        }
+
+        .rating input:checked ~ label {
+            color: gold;
+        }
+
+        .rating input:hover ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <div class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Recommended.html">RECOMMENDED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">VIDEO GAMES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="remot.html">TRENDY GAMES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LOGOUT.html">LOGOUT</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="wishlist.html">WISHLIST</a>
+                      </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- header section end -->
+     
+
+    
+    <div class="video_section layout_padding padding_video_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="video_text_2">VIDEO GAMES</h1>
+                    <h1 class="controller_text_2">Your Ultimate Gaming Hub: Genres, Reviews, and More!</h1>
+                    <p class="banner_text_2">Dive deep into the world of gaming on Gamepad! Explore a variety of genres through dedicated pages or discover trending titles in our featured games section.  Whether you're a seasoned veteran or a curious newcomer, we offer informative blog posts, curated game lists, and in-depth reviews to help you find your perfect match.  Get ready to explore fantastical worlds, strategize your way to victory, or unwind with a relaxing game – the adventure awaits!</p>
+                    <div class="shop_bt"><a href="#">Start browsing</a></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_4"><img src="images/img-4.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .game {
+            height: 100%; /* Ensure each card takes up full height */
+            border: 1px solid #ddd; /* Example border for clarity */
+            text-align: center; /* Center text content */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .game img {
+            max-width: 100%;
+            height: auto;
+            margin: auto; /* Center the image horizontally and vertically */
+            display: block; /* Ensure image is treated as block element */
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <!-- Game Cards Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Game 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/eldenring.jpeg" alt="Game 1 Image">
+                    <h2>Elden Ring</h2>
+                    <p>A dark fantasy action RPG where you traverse a vast world filled with mysteries, powerful enemies, and epic lore.</p>
+                    <p class="price">$59.99</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game1" name="rating_game1" value="5" /><label for="star5_game1"></label>
+                        <input type="radio" id="star4_game1" name="rating_game1" value="4" /><label for="star4_game1"></label>
+                        <input type="radio" id="star3_game1" name="rating_game1" value="3" /><label for="star3_game1"></label>
+                        <input type="radio" id="star2_game1" name="rating_game1" value="2" /><label for="star2_game1"></label>
+                        <input type="radio" id="star1_game1" name="rating_game1" value="1" /><label for="star1_game1"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game1">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/rainbowsixsiege.jpg" alt="Game 2 Image">
+                    <h2>Rainbow Six Siege</h2>
+                    <p>An intense, tactical shooter where you engage in close-quarter combat, team strategy, and destruction-based gameplay.</p>
+                    <p class="price">$39.99</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game2" name="rating_game2" value="5" /><label for="star5_game2"></label>
+                        <input type="radio" id="star4_game2" name="rating_game2" value="4" /><label for="star4_game2"></label>
+                        <input type="radio" id="star3_game2" name="rating_game2" value="3" /><label for="star3_game2"></label>
+                        <input type="radio" id="star2_game2" name="rating_game2" value="2" /><label for="star2_game2"></label>
+                        <input type="radio" id="star1_game2" name="rating_game2" value="1" /><label for="star1_game2"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game2">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/overwatch2.jpeg" alt="Game 3 Image">
+                    <h2>Overwatch 2</h2>
+                    <p>A vibrant team-based shooter where heroes with unique abilities clash in fast-paced, objective-driven battles.</p>
+                    <p class="price">$00.00</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game3" name="rating_game3" value="5" /><label for="star5_game3"></label>
+                        <input type="radio" id="star4_game3" name="rating_game3" value="4" /><label for="star4_game3"></label>
+                        <input type="radio" id="star3_game3" name="rating_game3" value="3" /><label for="star3_game3"></label>
+                        <input type="radio" id="star2_game3" name="rating_game3" value="2" /><label for="star2_game3"></label>
+                        <input type="radio" id="star1_game3" name="rating_game3" value="1" /><label for="star1_game3"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game3">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/Rocketleague.jpg" alt="Game 4 Image">
+                    <h2>Rocket League</h2>
+                    <p>Rocket League is a high-octane vehicular soccer game that combines fast-paced action with skillful maneuvers, offering thrilling gameplay and competitive multiplayer matches.</p>
+                    <p class="price">$19.99</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game4" name="rating_game4" value="5" /><label for="star5_game4"></label>
+                        <input type="radio" id="star4_game4" name="rating_game4" value="4" /><label for="star4_game4"></label>
+                        <input type="radio" id="star3_game4" name="rating_game4" value="3" /><label for="star3_game4"></label>
+                        <input type="radio" id="star2_game4" name="rating_game4" value="2" /><label for="star2_game4"></label>
+                        <input type="radio" id="star1_game4" name="rating_game4" value="1" /><label for="star1_game4"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game4">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/roblox.jpg" alt="Game 5 Image">
+                    <h2>Roblox</h2>
+                    <p>Roblox allows players to create their own games using its proprietary engine, Roblox Studio, which can then be played by other users.</p>
+                    <p class="price">$00.00</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game5" name="rating_game5" value="5" /><label for="star5_game5"></label>
+                        <input type="radio" id="star4_game5" name="rating_game5" value="4" /><label for="star4_game5"></label>
+                        <input type="radio" id="star3_game5" name="rating_game5" value="3" /><label for="star3_game5"></label>
+                        <input type="radio" id="star2_game5" name="rating_game5" value="2" /><label for="star2_game5"></label>
+                        <input type="radio" id="star1_game5" name="rating_game5" value="1" /><label for="star1_game5"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game5">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/Left4Dead2.jpg" alt="Game 6 Image">
+                    <h2>Left 4 Dead 2</h2>
+                    <p>The four survivors have to fight their way through hordes of infected, using safehouses along the way to rest and recuperate in order to reach extraction points.</p>
+                    <p class="price">$9.99</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game6" name="rating_game6" value="5" /><label for="star5_game6"></label>
+                        <input type="radio" id="star4_game6" name="rating_game6" value="4" /><label for="star4_game6"></label>
+                        <input type="radio" id="star3_game6" name="rating_game6" value="3" /><label for="star3_game6"></label>
+                        <input type="radio" id="star2_game6" name="rating_game6" value="2" /><label for="star2_game6"></label>
+                        <input type="radio" id="star1_game6" name="rating_game6" value="1" /><label for="star1_game6"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game6">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 7 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/CS2_Cover_Art.jpg" alt="Game 7 Image">
+                    <h2>Counter-Strike 2</h2>
+                    <p>Counter-Strike 2 (CS2) is a round-based, 5v5 tactical FPS with an Attackers vs. Defenders setup and no respawns, meaning if a player is eliminated they will not respawn until the next round.</p>
+                    <p class="price">$00.00</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game7" name="rating_game7" value="5" /><label for="star5_game7"></label>
+                        <input type="radio" id="star4_game7" name="rating_game7" value="4" /><label for="star4_game7"></label>
+                        <input type="radio" id="star3_game7" name="rating_game7" value="3" /><label for="star3_game7"></label>
+                        <input type="radio" id="star2_game7" name="rating_game7" value="2" /><label for="star2_game7"></label>
+                        <input type="radio" id="star1_game7" name="rating_game7" value="1" /><label for="star1_game7"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game7">Average Rating: 0</div>
+                </div>
+            </div>
+            <!-- Game 8 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="game">
+                    <img src="images/rust.jpeg" alt="Game 8 Image">
+                    <h2>Rust</h2>
+                    <p>Rust pits players against each other in a harsh, open world environment with the sole goal of survival. Animals, such as wolves and bears, act as a looming threat, but the primary danger comes from other players.</p>
+                    <p class="price">$39.99</p>
+                    <div class="rating">
+                        <input type="radio" id="star5_game8" name="rating_game8" value="5" /><label for="star5_game8"></label>
+                        <input type="radio" id="star4_game8" name="rating_game8" value="4" /><label for="star4_game8"></label>
+                        <input type="radio" id="star3_game8" name="rating_game8" value="3" /><label for="star3_game8"></label>
+                        <input type="radio" id="star2_game8" name="rating_game8" value="2" /><label for="star2_game8"></label>
+                        <input type="radio" id="star1_game8" name="rating_game8" value="1" /><label for="star1_game8"></label>
+                    </div>
+                    <div class="average-rating" id="average_rating_game8">Average Rating: 0</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You must be logged in to rate a game. Please <a href="login.html">log in</a> to continue.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+  
+    <script>
+     function handleRatingAttempt(event) {
+    // בודק אם המשתמש מחובר
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        // מונע את ההתנהגות המותרת של התיבה סימון
+        event.preventDefault();
+        // מסמן את התיבה של הדירוג לא מסומן
+        event.target.checked = false;
+        // מציג חלון מודאלי להתחברות באמצעות jQuery
+        $('#loginModal').modal('show');
+        return;
+    }
+// קורא לפונקציה handleRatingChange אם המשתמש מחובר
+    handleRatingChange(event);
+}
+
+function handleRatingChange(event) {
+    // בודק אם המשתמש מחובר
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        return; // יוצא אם אינו מחובר
+    }
+
+    const gameId = event.target.name.split('_')[1];
+    const newRating = parseInt(event.target.value);
+    const userRatings = JSON.parse(localStorage.getItem('userRatings')) || {};
+    let ratings = JSON.parse(localStorage.getItem(`ratings_${gameId}`)) || [];
+
+    if (userRatings[gameId] !== undefined) {
+        const oldRating = userRatings[gameId];
+        const index = ratings.indexOf(oldRating);
+        if (index !== -1) {
+            ratings[index] = newRating;// עדכון דירוג קיים
+        } else {
+            ratings.push(newRating);// הוספת דירוג חדש
+        }
+    } else {
+        ratings.push(newRating);// הוספת דירוג חדש אם המשתמש לא דירג עד כה
+    }
+// עדכון של userRatings ו-ratings ב-localStorage
+    userRatings[gameId] = newRating;
+    localStorage.setItem('userRatings', JSON.stringify(userRatings));
+    localStorage.setItem(`ratings_${gameId}`, JSON.stringify(ratings));
+// עדכון תצוגת הדירוג הממוצע
+    updateAverageRating(gameId);
+}
+
+function updateAverageRating(gameId) {
+    // משיכת דירוגים עבור המשחק מ-localStorage, או איתחול ריק
+    const ratings = JSON.parse(localStorage.getItem(`ratings_${gameId}`)) || [];
+    // חישוב הדירוג הממוצע, מעגל לספרה עשרונית אחת
+    const average = ratings.length ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1) : 0;
+    // עדכון של אלמנט ה-HTML שמציג את הדירוג הממוצע
+    document.getElementById(`average_rating_${gameId}`).innerText = `Average Rating: ${average}`;
+}
+
+function initializeRatings() {
+    const gameIds = ['game1', 'game2', 'game3', 'game4', 'game5', 'game6', 'game7', 'game8'];
+
+    gameIds.forEach(gameId => {
+        const inputs = document.querySelectorAll(`input[name=rating_${gameId}]`);
+        inputs.forEach(input => {
+            input.addEventListener('click', handleRatingAttempt);
+        });
+
+        updateAverageRating(gameId);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initializeRatings);
+
+function userLoggedIn() {
+    sessionStorage.setItem("loggedIn", "true");
+}
+
+function userLoggedOut() {
+    sessionStorage.setItem("loggedIn", "false");
+}
+</script>
+</body>
+</html>
+
+<!-- עיצוב הקלפים -->
+<style>
+    .game {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.game:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.game h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.game p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.game .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.rating {
+    margin-bottom: 15px;
+}
+
+.rating label {
+    color: #ffd700;
+    font-size: 24px;
+    padding: 0 2px;
+}
+
+.average-rating {
+    font-size: 0.9em;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .game {
+        padding: 15px;
+    }
+    
+    .game img {
+        height: 150px;
+    }
+    
+    .game h2 {
+        font-size: 1.2em;
+    }
+}
+  </style>
+  
+
+<!-- מיקום הדברים של הקלפים באמצע --> 
+<style>
+    /* Adjusting card heights */
+.row .game {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row .game > * {
+    flex: 1 1 auto; /* Allow each element to grow to fill available space */
+}
+
+/* Adjusting card heights */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align items with space in between */
+    height: 100%; /* Make each card take up full height */
+    border: 1px solid #ddd; /* Example border for clarity */
+}
+
+.row .game > * {
+    flex: 1 1 auto; /* Allow each element to grow to fill available space */
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+}
+
+.row .game img {
+    max-width: 100%; /* Ensure images don't exceed card width */
+}
+
+.row .game .stars {
+    display: flex;
+    justify-content: center; /* Center stars horizontally */
+    align-items: center; /* Center stars vertically */
+}
+
+</style>
+
+
+
+<style>
+.game {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px;
+}
+
+.game h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl; /* Right to Left layout */
+    margin-bottom: 10px;
+}
+
+.rating input {
+    display: none; /* Hide radio buttons */
+}
+
+.rating label {
+    float: right; /* Align labels to the right */
+    cursor: pointer;
+    color: grey; /* Default color of the stars */
+}
+
+.rating label:before {
+    content: '\2605'; /* Star symbol */
+    font-size: 1.5em;
+}
+
+.rating input:checked ~ label {
+    color: orange; /* Color of the selected star */
+
+
+}
+
+</style>
+
+              
+          
+
+
+  <!-- Game Section end -->
+  <div class="section_footer margin_top_2 footer-background">
+    <div class="container"> 
+        <div class="footer_section_2">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h2 class="account_text">About Us</h2>
+                    <p class="ipsum_text_2">We're gamers like you, passionate about sharing the best games and experiences. Join our community to discover, rate, and discuss your favorite games. Let's game together!</p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h2 class="account_text">Useful Link</h2>
+                    <div class="useful_link">
+                        <ul>
+                            <li><a href="#">Video games</a></li>
+                            <li><a href="#">TRENDY GAMES</a></li>
+                            <li><a href="#">RECOMMENDED</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3"></div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h2 class="account_text">Updates</h2>
+                    <input type="email" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                    <button class="subscribr_bt">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="social_icon">
+            <ul>
+                <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                <li><a href="#"><img src="images/linkdin-icon.png"></a></li>
+                <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer section end -->
+  <!-- copyright section start -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">© Copyright 2024 All Rights Reserved By DOMINIK</p>
+    </div>
+  </div>
+  <!-- copyright section end -->
+  <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadRatingsFromSession();
+        
+            document.querySelectorAll(".rating input").forEach(function(radio) {
+                radio.addEventListener("change", function() {
+                    const gameIndex = Array.from(this.name).pop();
+                    const ratingValue = this.value;
+                    saveRatingToSession(gameIndex, ratingValue);
+                    calculateAndDisplayAverageRating(gameIndex);
+                });
+            });
+        });
+        
+        function saveRatingToSession(gameIndex, ratingValue) {
+            let ratings = JSON.parse(sessionStorage.getItem('ratings')) || {};
+            if (!ratings[gameIndex]) {
+                ratings[gameIndex] = [];
+            }
+            ratings[gameIndex].push(Number(ratingValue));
+            sessionStorage.setItem('ratings', JSON.stringify(ratings));
+        }
+        
+        function loadRatingsFromSession() {
+            let ratings = JSON.parse(sessionStorage.getItem('ratings')) || {};
+            for (const gameIndex in ratings) {
+                const averageRating = calculateAverageRating(ratings[gameIndex]);
+                document.getElementById(`average_rating_game${gameIndex}`).innerText = `Average Rating: ${averageRating}`;
+            }
+        }
+        
+        function calculateAndDisplayAverageRating(gameIndex) {
+            let ratings = JSON.parse(sessionStorage.getItem('ratings')) || {};
+            if (!ratings[gameIndex]) {
+                return;
+            }
+            const averageRating = calculateAverageRating(ratings[gameIndex]);
+            document.getElementById(`average_rating_game${gameIndex}`).innerText = `Average Rating: ${averageRating}`;
+        }
+        
+        function calculateAverageRating(ratings) {
+            const sum = ratings.reduce((a, b) => a + b, 0);
+            return (sum / ratings.length).toFixed(1);
+        }
+        </script>
+        
+</body>
+</html>
